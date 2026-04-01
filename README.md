@@ -1,44 +1,241 @@
-# Insurance Claim Prediction
+# Insurance Claim Prediction App
 
-## Project Overview
-This project aims to build a machine learning model that predicts whether a building will have at least one insured claim during the insured period based on building characteristics.
+This project is an end-to-end machine learning application designed to predict the probability of an insurance claim based on building-related attributes.
 
-## Dataset
-- The dataset contains building-level features
-- Target variable: 'Claim'
-  - 1 At least one claim occurred
-  - 0 No claim occurred
- 
-## Project Sructure
-- '01_data_understanding.ipynb' - Data loading and inspection
-- '02_EDA.ipynb' - Exploratory Data Analysis and insights
-- '03_Preprocessing.ipynb' -
-  - Data cleaning and feature engineering
-  - Train-test split
-  - Model trainig (Logistic Regression & Random Forest)
-  - Hyperparameter tuning
-  - Model evaluation and comparison
+The solution covers the full data science workflow, from data understanding and preprocessing to model deployment using Streamlit.
 
-## Models Used
-- Logistic Regression (baseline and tuned)
-- Random Forest (baseline and tuned)
+---
 
-> All modeling, tuning, and evaluation steps were performed within the preprocessing notebook.
+## 📌 Project Overview
 
-## Evaluation Metrics
-- Accuracy
-- ROC-AUC
-- Confusion Matrix
+Insurance companies need to assess the likelihood of claims in order to manage risk and make informed decisions.
 
-## Results
-- Best ROC-AUC achieved: ~0.69
-- Best Accuracy achieved: ~0.78
+This project uses machine learning models to predict whether a building is likely to result in an insurance claim based on structural and environmental features.
 
-## Tools & Libraries
+The final solution is deployed as an interactive **Streamlit web application**.
+
+---
+
+## 🎯 Objective
+
+The objective of this project is to build a predictive model that estimates the likelihood of an insurance claim using historical building data.
+
+---
+
+## 🛠 Workflow
+
+The project was completed in the following stages:
+
+1. **Data Understanding**
+   - explored dataset structure
+   - checked missing values
+   - reviewed feature descriptions
+
+2. **Exploratory Data Analysis (EDA)**
+   - analyzed distributions
+   - checked target imbalance
+   - identified important patterns
+
+3. **Preprocessing & Feature Engineering**
+   - handled missing values
+   - encoded categorical variables
+   - scaled numerical features
+   - built preprocessing pipeline
+
+4. **Modeling & Evaluation**
+   - Logistic Regression
+   - Tuned Logistic Regression
+   - Random Forest
+
+5. **Deployment**
+   - saved model using `joblib`
+   - built interactive app with Streamlit
+   - deployed online
+
+---
+
+## 🤖 Models Used
+
+The following models were trained and evaluated:
+
+- Logistic Regression
+- Tuned Logistic Regression
+- Random Forest
+
+### Final Model Selected
+**Random Forest**
+
+Random Forest was selected for deployment because it achieved better recall for actual insurance claim cases, making it more aligned with the business objective.
+
+---
+
+## 📊 Model Performance Summary
+
+| Model | Accuracy | Claim Recall |
+|---|---:|---:|
+| Logistic Regression | 78.1% | 16% |
+| Tuned Logistic Regression | 78.3% | 13% |
+| Random Forest | 76.5% | 25% |
+
+---
+
+## 🚀 Deployment
+
+The final model was deployed using **Streamlit** to provide real-time predictions through a user-friendly web interface.
+
+Users can enter building details such as:
+
+- insured period
+- geo code
+- building age
+- building dimension
+- residential status
+- building type
+- number of windows
+- garden
+- settlement
+
+and receive instant prediction results.
+
+---
+
+## 🧰 Tools & Technologies
+
 - Python
-- Pandas, Numpy
+- Pandas
+- NumPy
 - Scikit-learn
-- Matplotlib, Seaborn
+- Streamlit
+- Joblib
+- Git / GitHub
+
+---
+
+## ▶️ Run Locally
+
+Clone the repository:
+
+```bash
+git clone <josephsolomonaldu-create># Insurance Claim Prediction App
+
+This project is an end-to-end machine learning application designed to predict the probability of an insurance claim based on building-related attributes.
+
+The solution covers the full data science workflow, from data understanding and preprocessing to model deployment using Streamlit.
+
+---
+
+## 📌 Project Overview
+
+Insurance companies need to assess the likelihood of claims in order to manage risk and make informed decisions.
+
+This project uses machine learning models to predict whether a building is likely to result in an insurance claim based on structural and environmental features.
+
+The final solution is deployed as an interactive **Streamlit web application**.
+
+---
+
+## 🎯 Objective
+
+The objective of this project is to build a predictive model that estimates the likelihood of an insurance claim using historical building data.
+
+---
+
+## 🛠 Workflow
+
+The project was completed in the following stages:
+
+1. **Data Understanding**
+   - explored dataset structure
+   - checked missing values
+   - reviewed feature descriptions
+
+2. **Exploratory Data Analysis (EDA)**
+   - analyzed distributions
+   - checked target imbalance
+   - identified important patterns
+
+3. **Preprocessing & Feature Engineering**
+   - handled missing values
+   - encoded categorical variables
+   - scaled numerical features
+   - built preprocessing pipeline
+
+4. **Modeling & Evaluation**
+   - Logistic Regression
+   - Tuned Logistic Regression
+   - Random Forest
+
+5. **Deployment**
+   - saved model using `joblib`
+   - built interactive app with Streamlit
+   - deployed online
+
+---
+
+## 🤖 Models Used
+
+The following models were trained and evaluated:
+
+- Logistic Regression
+- Tuned Logistic Regression
+- Random Forest
+
+### Final Model Selected
+**Random Forest**
+
+Random Forest was selected for deployment because it achieved better recall for actual insurance claim cases, making it more aligned with the business objective.
+
+---
+
+## 📊 Model Performance Summary
+
+| Model | Accuracy | Claim Recall |
+|---|---:|---:|
+| Logistic Regression | 78.1% | 16% |
+| Tuned Logistic Regression | 78.3% | 13% |
+| Random Forest | 76.5% | 25% |
+
+---
+
+## 🚀 Deployment
+
+The final model was deployed using **Streamlit** to provide real-time predictions through a user-friendly web interface.
+
+Users can enter building details such as:
+
+- insured period
+- geo code
+- building age
+- building dimension
+- residential status
+- building type
+- number of windows
+- garden
+- settlement
+
+and receive instant prediction results.
+
+---
+
+## 🧰 Tools & Technologies
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Streamlit
+- Joblib
+- Git / GitHub
+
+---
+
+## ▶️ Run Locally
+
+Clone the repository:
+
+```bash
+git clone <josephsolomonaldu-create>
+cd insurance-claim-prediction
 
 ## Author
 Joseph Solomon Aldu
